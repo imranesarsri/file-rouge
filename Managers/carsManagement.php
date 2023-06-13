@@ -69,7 +69,7 @@ class CarsManagement extends Car
         $inputValue = trim($inputValue);
         $inputValue = htmlspecialchars($inputValue, ENT_QUOTES, 'UTF-8');
         $inputValue = strip_tags($inputValue);
-
+        $inputValue = strtolower($inputValue);
         return $inputValue;
     }
 
@@ -78,7 +78,6 @@ class CarsManagement extends Car
         $db = DB::connect();
         $sql = $db->prepare("INSERT INTO car (`model`, `type`, `year`, `price`, `color`, `brand`,`fuel_type`, `transmission_type`, `mileage`, `engine_capacity`) 
             VALUES (:Mo ,:Ty ,:Ye ,:Pr ,:Co ,:Br,:Fu,:Tr ,:Mi ,:En)");
-
         $model = $this->clen($Add->getModel());
         $type = $this->clen($Add->getType());
         $year = $this->clen($Add->getYear());

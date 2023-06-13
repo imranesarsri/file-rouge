@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include_once "./Views/Assets/Camponent/Admin/Header.php";
 include_once "./Views/Assets/Camponent/Admin/Nav.php";
 

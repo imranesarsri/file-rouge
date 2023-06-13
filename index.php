@@ -3,7 +3,7 @@
 
 if (isset($_GET['action'])) {
     $Action = $_GET['action'];
-    $pages = ['About', 'Sale', 'Rent', 'Contact'];
+    $pages = ['About', 'Sale', 'Rent', 'Contact', 'Details'];
     if (in_array($Action, $pages)) {
         include_once "./Controller/User/" . $Action . ".php";
     } else {

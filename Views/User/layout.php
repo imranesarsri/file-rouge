@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once "./Views/Assets/Camponent/User/Nav.php";
 include_once "./Views/Assets/Camponent/User/Footer.php";
 include_once "./Views/Assets/Camponent/User/Form.php";

@@ -19,7 +19,10 @@ ob_start();
         </div>
         <div class="part-profile">
             <div class="profail" style="background-image: url(./Views/Assets/img/homme.jpg);"></div>
-            <span>imrane sarsri</span>
+            <span>
+                <?= $_SESSION['Email']; ?>
+                <?= $_SESSION['Image_profile']; ?>
+            </span>
             <i class="fa-solid icon fa-chevron-down"></i>
         </div>
     </div>
@@ -27,4 +30,5 @@ ob_start();
 
 <?php
 $Header = ob_get_clean();
+
 ?>

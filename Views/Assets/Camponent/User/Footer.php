@@ -1,7 +1,7 @@
 <?php
 ob_start()
-?>
-<footer class="text-center text-lg-start p-2 text-muted">
+    ?>
+<footer class="text-center text-lg-start p-2 ">
 
     <section class="">
         <div class="container text-center text-md-start mt-5">

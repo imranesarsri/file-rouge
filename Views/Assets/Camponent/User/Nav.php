@@ -15,10 +15,10 @@ ob_start()
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active " aria-current="page" href="./index.php">Home</a>
+                    <a class="nav-link active text-capitalize" aria-current="page" href="./index.php">home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="./index.php?action=About">About</a>
+                    <a class="nav-link text-capitalize " aria-current="page" href="./index.php?action=About">about</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
@@ -26,12 +26,15 @@ ob_start()
                         Services
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="./index.php?action=Sale">cars for sale</a></li>
-                        <li><a class="dropdown-item" href="./index.php?action=Rent">Cars for rent</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="./index.php?action=Sale">cars for sale</a>
+                        </li>
+                        <li><a class="dropdown-item text-capitalize" href="./index.php?action=Rent">cars for rent</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="./index.php?action=Contact">Contact</a>
+                    <a class="nav-link text-capitalize" aria-current="page" href="./index.php?action=Contact">contact
+                    </a>
                 </li>
             </ul>
             <div id="btnDark" class="d-flex text-xl me-5 gap-3 rounded-3 border border-light">
@@ -42,10 +45,29 @@ ob_start()
                     <i class="fas fa-moon"></i>
                 </div>
             </div>
+            <?php
+            if (isset($_SESSION['Email'])) {
+                ?>
+            <div class="position-relative">
+                <div class="profail"></div>
+                <span>
+                    <?= $_SESSION['Email'] ?>
+                </span>
+                <div class="position-absolute">
+                    <span class="d-block border-b-2">Profaile</span>
+                    <span class="d-block border-b-2">Sign Out</span>
+                </div>
+            </div>
+            <?php
+            } else {
+                ?>
             <form class="d-flex gap-3 align-items-center">
-                <a href="./dashboard.php" class=" btn-blue">Sign In</a>
-                <a href="./dashboard.php" class="  blue-button">Sign Up</a>
+                <a href="./login.php?action=SignIn" class="btn">login</a>
+                <a href="./dashboard.php" class=" text-capitalize blue-button">sign up</a>
             </form>
+            <?php
+            }
+            ?>
         </div>
     </div>
 </nav>

@@ -1,9 +1,9 @@
 <?php
 ob_start()
 
-?>
+    ?>
 <!-- Button trigger modal -->
-<div class="col-xxl-4 col-xl-6 col-lg-4 col-md-6">
+<!-- <div class="col-xxl-4 col-xl-6 col-lg-4 col-md-6">
     <div class="filter-card-item position-relative overflow-hidden rounded bg-white">
         <a href="#" class="icon-btn compare-btn position-absolute"><i class="fa-solid fa-compress"></i></a>
         <a href="#" class="icon-btn wish-btn position-absolute"><i class="fa-solid fa-heart"></i></a>
@@ -37,7 +37,7 @@ ob_start()
             <a href="car-rental.html" class="btn outline-btn btn-sm d-block">View Details</a>
         </div>
     </div>
-</div>
+</div> -->
 
 <?php
-$Form = ob_get_clean();
+// $Form = ob_get_clean();

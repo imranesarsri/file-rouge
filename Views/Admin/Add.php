@@ -9,11 +9,11 @@ ob_start();
     <?= $massageError ?>
     <div class="col-12 col-lg-6">
         <label class="ps-2" for="Model">Model</label><br>
-        <input id="Model" name="Model" type="text">
+        <input id="Model" name="Model" type="text" required>
     </div>
     <div class="col-12 col-lg-6">
         <label class="ps-2" for="Brand">Brand</label><br>
-        <input id="Brand" name="Brand" type="text">
+        <input id="Brand" name="Brand" type="text" required>
     </div>
     <div class="col-12 col-lg-6">
         <label class="ps-2" for="Color">Color</label><br>
@@ -21,11 +21,11 @@ ob_start();
     </div>
     <div class="col-12 col-lg-6">
         <label class="ps-2" for="engineCapacity">engine Capacity</label><br>
-        <input id="engineCapacity" name="engineCapacity" type="text">
+        <input id="engineCapacity" name="engineCapacity" type="text" required>
     </div>
     <div class="col-12 col-lg-6">
         <label class="ps-2" for="fuel">Fuel Type</label><br>
-        <select name="fuel_type" id="fuel" class="w-100 m-2 py-2 rounded-3" id="fuel">
+        <select name="fuel_type" id="fuel" class="w-100 m-2 py-2 rounded-3" id="fuel" required>
             <option value="gasoline">Gasoline</option>
             <option value="diesel">Diesel</option>
             <option value="electric">Electric</option>
@@ -49,15 +49,15 @@ ob_start();
     </div>
     <div class="col-12 col-lg-6">
         <label class="ps-2" for="Prix">Prix</label><br>
-        <input id="Prix" name="Prix" type="number">
+        <input id="Prix" name="Prix" type="number" required>
     </div>
     <div class="col-12 col-lg-6">
         <label class="ps-2" for="Mileage">Mileage</label><br>
-        <input id="Mileage" name="Mileage" type="number">
+        <input id="Mileage" name="Mileage" type="number" required>
     </div>
     <div class="col-12 col-lg-6">
         <label class="ps-2" for="Your">Your</label><br>
-        <input id="Your" name="Your" type="date">
+        <input id="Your" name="Your" type="date" required>
     </div>
     <div class="col-12 col-lg-6">
         <label class="ps-2" for="type">type</label><br>
@@ -68,16 +68,13 @@ ob_start();
     </div>
     <div class="col-12 col-lg-6">
         <label class="ps-2" for="img">main image</label><br>
-        <input id="img" name="mianImage" type="file">
+        <input id="img" name="mianImage" type="file" required>
     </div>
     <div class="col-12 col-lg-6">
         <label class="ps-2" for="imgs">images</label><br>
-        <input id="imgs" multiple name="images[]" type="file">
+        <input id="imgs" multiple name="images[]" type="file" required>
     </div>
-
 </div>
-
-
 <?php
 
 $bodySection = ob_get_clean();
