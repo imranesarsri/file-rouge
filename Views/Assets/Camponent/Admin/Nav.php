@@ -26,35 +26,32 @@ ob_start();
             </div>
             <div class="sub-menu">
                 <a href="./dashboard.php?action=Add">Add car</a>
-                <a href="./dashboard.php?action=Sale">Cars for Sale</a>
-                <a href="./dashboard.php?action=Rent">Cars for Rent</a>
-                <a href="./dashboard.php?action=Sold">Sold Cars</a>
-                <a href="./dashboard.php?action=Rented">Rented Cars</a>
-                <a href="./dashboard.php?action=Reservation">Reservation</a>
+                <a href="./dashboard.php?action=AllCars">All Cars</a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="slide-btn">
+                <i class="fa-solid fa-users"></i>
+                <span>User</span>
+                <i id="icon" class="fa-solid fa-angle-up"></i>
+            </div>
+            <div class="sub-menu">
+                <a href="./dashboard.php?action=AddUser">Add User</a>
+                <a href="./dashboard.php?action=AddAdmin">Add Admin</a>
+                <a href="./dashboard.php?action=AllUsers">All Users</a>
+                <a href="./dashboard.php?action=AllAdmins">All Admin</a>
             </div>
         </div>
         <div class="item">
             <div class="slide-btn">
                 <i class="fa-solid fa-cart-shopping"></i>
-                <span>Prodact</span>
+                <span>Reservation</span>
                 <i id="icon" class="fa-solid fa-angle-up"></i>
             </div>
             <div class="sub-menu">
-                <a href="">Add</a>
-                <a href="">All prodact</a>
-                <a href="">Add</a>
-            </div>
-        </div>
-        <div class="item">
-            <div class="slide-btn">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span>Prodact</span>
-                <i id="icon" class="fa-solid fa-angle-up"></i>
-            </div>
-            <div class="sub-menu">
-                <a href="">Add</a>
-                <a href="">All prodact</a>
-                <a href="">Add</a>
+                <a href="./dashboard.php?action=ActiveReservations">Active Reservations</a>
+                <a href="./dashboard.php?action=AllCarsSold">All Cars Sold</a>
+                <a href="./dashboard.php?action=Reserve">Reserve</a>
             </div>
         </div>
     </div>

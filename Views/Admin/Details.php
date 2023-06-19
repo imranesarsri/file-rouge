@@ -15,15 +15,15 @@ ob_start();
     <?php
     foreach ($resultsImgs as $resultsImg) {
         ?>
-    <div class="mySlides mb-5">
-        <?php
+        <div class="mySlides mb-5">
+            <?php
             ?>
-        <div class="numbertext"> 2 /
-            <?= $countAllImages->getCount() ?>
+            <div class="numbertext"> 2 /
+                <?= $countAllImages->getCount() ?>
+            </div>
+            <img src="<?= $resultsImg->getImage_url() ?>" value="<?= $resultsImg->getImage_id_car() ?>">
         </div>
-        <img src="<?= $resultsImg->getImage_url() ?>" value="<?= $resultsImg->getImage_id_car() ?>">
-    </div>
-    <?php
+        <?php
     }
     ?>
 
@@ -34,11 +34,11 @@ ob_start();
         <?php
         foreach ($resultsImgs as $resultsImg) {
             ?>
-        <div class="imageslider">
-            <img class="demo cursor" src="<?= $resultsImg->getImage_url() ?>"
-                value="<?= $resultsImg->getImage_id_car() ?>" onclick="currentSlide(2)" alt="">
-        </div>
-        <?php
+            <div class="imageslider">
+                <img class="demo cursor" src="<?= $resultsImg->getImage_url() ?>"
+                    value="<?= $resultsImg->getImage_id_car() ?>" onclick="currentSlide(2)" alt="">
+            </div>
+            <?php
         }
         ?>
 
@@ -50,12 +50,6 @@ ob_start();
         <span class="fs-5 fw-bold w-50">Model</span>
         <span class="w-50">
             <?= $resultById->getModel() ?>
-        </span>
-    </div>
-    <div class=" d-flex align-items-center ">
-        <span class="fs-5 fw-bold w-50">Type</span>
-        <span class="w-50">
-            <?= $resultById->getType() ?>
         </span>
     </div>
     <div class=" d-flex align-items-center ">
@@ -117,7 +111,7 @@ ob_start();
 $bodySection = ob_get_clean();
 
 
-$footerSection = " <a href='./dashboard.php?action=Delete&id_car=" . $resultById->getCar_id() . "&type=" . $resultById->getType() . "' class='btn-red button w-100'>Delete </a>  <a href='./dashboard.php?action=Add' class='btn-blue button w-100'>Update </a>";
+$footerSection = " <a href='./dashboard.php?action=Delete&id_car=" . $resultById->getCar_id() . "' class='btn-red button w-100'>Delete </a>  <a href='./dashboard.php?action=Update&id_car=" . $resultById->getCar_id() . "' class='btn-blue button w-100'>Update </a>";
 
 
 include_once "./Views/Admin/layout.php";

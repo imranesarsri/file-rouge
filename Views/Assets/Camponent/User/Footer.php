@@ -8,7 +8,7 @@ ob_start()
             <div class="row mt-3">
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <div class="text-uppercase fw-bold mb-4">
-                        <img src="./Views/Assets/img/logo_dark.png" class="logo" alt="">
+                        <img src="./Views/Assets/img/logo-dark-1.png" class="logo" alt="">
                         <span>Luxe Drive</span>
                     </div>
                     <p>

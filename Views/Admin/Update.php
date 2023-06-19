@@ -69,27 +69,12 @@ ob_start();
         <input id="Year" name="Year" value="<?= $resultById->getYear() ?>" type="text">
     </div>
     <div class="col-12 col-lg-6 ">
-        <label class="ps-2" for="type">type</label><br>
-        <select name="Type" id="type" class="w-100 m-2 py-2 rounded-3" id="type">
-            <option value="<?= $resultById->getType() ?>"><?= $resultById->getType() ?>
-                <?php
-                $selectedType = $resultById->getType();
-                $types = ['buy', 'rent'];
-                foreach ($types as $type) {
-                    if ($type !== $selectedType) {
-                        echo '<option value="' . $type . '">' . $type . '</option>';
-                    }
-                }
-                ?>
-        </select>
-    </div>
-    <div class="col-12 ">
         <label class="ps-2" for="status">Status</label><br>
         <select name="status" id="status" class="w-100 m-2 py-2 rounded-3" id="status">
             <option value="<?= $resultById->getStatus() ?>"><?= $resultById->getStatus() ?>
                 <?php
                 $selectedStatus = $resultById->getStatus();
-                $status = ['available', 'reserved', 'sold', 'rented'];
+                $status = ['available', 'reserved', 'sold'];
                 foreach ($status as $type) {
                     if ($type !== $selectedStatus) {
                         echo '<option value="' . $type . '">' . $type . '</option>';

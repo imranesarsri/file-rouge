@@ -527,3 +527,49 @@ table td {
     border-radius: 0 0 10px;
     border: 1px solid var(--Dark-Text-Primary-Body);
 }
+
+
+.errorMessage {
+    color: var(--light-Red);
+    margin: 0 0 10px 10px;
+    font-size: 14px;
+}
+
+
+.profail {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: contain;
+    
+}
+
+.slidcardprofaile {
+    background: var(--dark-Section);
+    position: absolute;
+    padding: 10px;
+    top: 56px;
+    width: 100%;
+    right: 10px;
+    border-radius: 5px;
+    min-width: 200px;
+    display: none;
+}
+
+.profil,
+.profaileBtm {
+    cursor: pointer;
+}
+
+.btnSignOut {
+    background: transparent;
+    border: none;
+    color: var(--Dark-Text-Primary);
+}
+/* reservation */
+.cardReservation {
+    border: 3px solid var(--Dark-Border);
+    padding: 20px;
+border-radius: 10px;
+}

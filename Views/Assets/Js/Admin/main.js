@@ -5,6 +5,12 @@ $(document).ready(function () {
 })
 
 
+$(document).ready(function () {
+    $(".slid-profail").click(function () {
+        $(this).next(".sub-menu-profail").slideToggle(500)
+    })
+})
+
 
 let slideIndex = 1;
 showSlides(slideIndex);

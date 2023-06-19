@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 ?>
 
@@ -21,10 +20,6 @@ session_start();
 <body class="dark">
 
     <section class="row login py-3 ">
-        <!-- <div class="text-center">
-            <img src="./Views/Assets/img/logo1.png" class="logo-login " alt="">
-            <span class="d-block fs-4 fw-bold text-capitalize mt-1"> Luxe Drive</span>
-        </div> -->
         <div class="col-12 col-sm-10 col-md-4 col-xl-3 card-login m-auto">
             <form method="post" class="py-5 pe-4 ps-2 d-flex flex-column">
                 <?= $Content ?>

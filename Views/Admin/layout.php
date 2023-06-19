@@ -1,6 +1,10 @@
 <?php
 session_start();
-
+if (isset($_POST['signOut'])) {
+    session_unset();
+    session_destroy();
+    header("Location:./index.php");
+}
 include_once "./Views/Assets/Camponent/Admin/Header.php";
 include_once "./Views/Assets/Camponent/Admin/Nav.php";
 

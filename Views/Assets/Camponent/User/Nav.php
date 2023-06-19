@@ -5,7 +5,7 @@ ob_start()
 <nav class="navbar navbar-expand-lg navbar-light sticky-top">
     <div class="container">
         <a class="navbar-brand" href="./index.php">
-            <img src="./Views//Assets/img/logo_light.png" class="logo" alt="">
+            <img src="./Views/Assets/img/logo-dark-1.png" class="logo" alt="">
             <span>Luxe Drive</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -19,18 +19,6 @@ ob_start()
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-capitalize " aria-current="page" href="./index.php?action=About">about</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Services
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item text-capitalize" href="./index.php?action=Sale">cars for sale</a>
-                        </li>
-                        <li><a class="dropdown-item text-capitalize" href="./index.php?action=Rent">cars for rent</a>
-                        </li>
-                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-capitalize" aria-current="page" href="./index.php?action=Contact">contact
@@ -48,14 +36,27 @@ ob_start()
             <?php
             if (isset($_SESSION['Email'])) {
                 ?>
-            <div class="position-relative">
-                <div class="profail"></div>
-                <span>
-                    <?= $_SESSION['Email'] ?>
-                </span>
-                <div class="position-absolute">
-                    <span class="d-block border-b-2">Profaile</span>
-                    <span class="d-block border-b-2">Sign Out</span>
+            <div class="align-items-center position-relative ">
+                <div class="slid-profail profil d-flex gap-2 align-items-center mt-3 mt-lg-0">
+                    <div class="profail" style="background-image: url(./<?= $_SESSION['Image_profile'] ?>)">
+                    </div>
+                    <span>
+                        <?= $_SESSION['Full_name'] ?>
+                    </span>
+                </div>
+                <div class="position-absolute sub-menu-profail slidcardprofaile">
+                    <a href="./Profile.php" class="d-flex py-2 gap-4 border-bottom align-items-center profaileBtm">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Profile</span>
+                    </a>
+                    <div class="d-flex py-2 gap-4 border-bottom align-items-center">
+                        <form action="" method="post">
+                            <button type="submit" class="btnSignOut" name="signOut">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                <span>Sign Out</span>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <?php
@@ -63,7 +64,7 @@ ob_start()
                 ?>
             <form class="d-flex gap-3 align-items-center">
                 <a href="./login.php?action=SignIn" class="btn">login</a>
-                <a href="./dashboard.php" class=" text-capitalize blue-button">sign up</a>
+                <a href="./login.php?action=SignUp" class=" text-capitalize blue-button">sign up</a>
             </form>
             <?php
             }
