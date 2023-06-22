@@ -199,9 +199,11 @@ class CLientsManagement extends Client
      * 
      * @param int $id_client - The ID of the client.
      */
-    public function decrementPoints($id_client)
+    public function decrementPoints($points, $id_client)
     {
-        $Update = "UPDATE `client` SET `points`=points - 1  WHERE `id_client`  = '$id_client'";
+        $Update = "UPDATE `client` SET `points`=points - '$points'  WHERE `id_client`  = '$id_client'";
         $this->connect()->query($Update);
     }
+
+
 }

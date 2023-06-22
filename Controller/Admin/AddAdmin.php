@@ -8,20 +8,12 @@ $errorEmail = false;
 if (isset($_POST['btnSignUp'])) {
     // Check if the 'btnSignUp' button was clicked.
 
+    // Get the value of the 'fullName ,phone, email, password, CIN' input field from the submitted form.
     $Full_name = $_POST['fullName'];
-    // Get the value of the 'fullName' input field from the submitted form.
-
     $Phone_number = $_POST['phone'];
-    // Get the value of the 'phone' input field from the submitted form.
-
     $Email = $_POST['email'];
-    // Get the value of the 'email' input field from the submitted form.
-
     $Password = $_POST['password'];
-    // Get the value of the 'password' input field from the submitted form.
-
     $CIN = $_POST['CIN'];
-    // Get the value of the 'CIN' input field from the submitted form.
 
     include_once "./Managers/ClientsManagement.php";
     // Include the 'ClientsManagement.php' file that contains the ClientsManagement class.

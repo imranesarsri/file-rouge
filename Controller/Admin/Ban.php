@@ -26,7 +26,7 @@ if (isset($_GET['car_id']) && isset($_GET['id_client']) && isset($_GET['id_reser
     $ClientManagement = new ClientsManagement();
     // Create an instance of the ClientsManagement class.
 
-    $ClientManagement->decrementPoints(1, $_GET['id_client']);
+    $ClientManagement->decrementPoints(3, $_GET['id_client']);
     // Call the decrementPoints method of the ClientsManagement instance with the 'id_client' parameter to decrement the points of the client.
 
     header("Location:./Dashboard.php?action=Reserve");

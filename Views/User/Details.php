@@ -3,6 +3,7 @@ ob_start();
 $counter = 1;
 ?>
 <div class="row container mx-auto">
+    <?php $errorDate ?>
     <h3 class="my-5 fw-bold ">Details car :</h3>
     <div class="container col-xl-8">
         <div class="mySlides mb-5">
@@ -15,16 +16,16 @@ $counter = 1;
         <?php
         foreach ($resultsImgs as $resultsImg) {
             ?>
-        <div class="mySlides mb-5">
-            <?php
+            <div class="mySlides mb-5">
+                <?php
                 ?>
-            <div class="numbertext">
-                <?= $counter++ ?> /
-                <?= $countAllImages->getCount() ?>
+                <div class="numbertext">
+                    <?= $counter++ ?> /
+                    <?= $countAllImages->getCount() ?>
+                </div>
+                <img src="<?= $resultsImg->getImage_url() ?>" id="sdd" value="<?= $resultsImg->getImage_id_car() ?>">
             </div>
-            <img src="<?= $resultsImg->getImage_url() ?>" id="sdd" value="<?= $resultsImg->getImage_id_car() ?>">
-        </div>
-        <?php
+            <?php
         }
         ?>
 
@@ -35,12 +36,12 @@ $counter = 1;
             <?php
             foreach ($resultsImgs as $resultsImg) {
                 ?>
-            <div class="imageslider">
-                <img class="demo cursor" src="<?= $resultsImg->getImage_url() ?>"
-                    value="<?= $resultsImg->getImage_id_car() ?>"
-                    onclick="currentSlide(<?= ($counter++) - $countAllImages->getCount() ?>)" alt="">
-            </div>
-            <?php
+                <div class="imageslider">
+                    <img class="demo cursor" src="<?= $resultsImg->getImage_url() ?>"
+                        value="<?= $resultsImg->getImage_id_car() ?>"
+                        onclick="currentSlide(<?= ($counter++) - $countAllImages->getCount() ?>)" alt="">
+                </div>
+                <?php
             }
             ?>
         </div>

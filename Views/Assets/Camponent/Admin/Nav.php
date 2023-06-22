@@ -4,7 +4,7 @@ ob_start();
 <nav>
     <div class="sidenav">
         <a href="./dashboard.php" class="logo">
-            <img src="./Views/Assets/img/logo1.png" class="logo" alt="">
+            <img src="./Views/Assets/img/logo1.png" class="logo mb-2" alt="">
             <span class="first-title">Luxe </span>
             <span class="last-title"> Drive</span>
         </a>

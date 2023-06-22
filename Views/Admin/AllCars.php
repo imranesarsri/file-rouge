@@ -47,7 +47,7 @@ ob_start();
         <td>
             <?= $result->getEngine_capacity() ?> L
         </td>
-        <td class="btn-table">
+        <td class="btn-table ">
             <a href="./dashboard.php?action=Delete&id_car=<?= $result->getCar_id() ?>" class="btn-red m-1"><i
                     class="fa-solid fa-trash-can"></i></a>
             <a href="./dashboard.php?action=Update&id_car=<?= $result->getCar_id() ?>" class="btn-success m-1"><i

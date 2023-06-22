@@ -50,7 +50,7 @@ class CarsManagement extends Car
     {
         $select = "SELECT car.car_id, `model`, `year`, `price`, `color`, `brand`, `fuel_type`, `transmission_type`, `mileage`, `status`, `engine_capacity`, `image_url`
         FROM `car` 
-        JOIN car_images 
+        JOIN car_images
         ON car.car_id = car_images.car_id
         WHERE car_images.is_main = 1
         AND car.car_id = $id";

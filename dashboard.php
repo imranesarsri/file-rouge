@@ -5,7 +5,7 @@ if (isset($_GET['action'])) {
     $Action = $_GET['action'];
 
     // Define an array of valid pages/actions
-    $pages = ['Add', 'Reservation', 'AllCars', 'Dashboard', 'Details', 'Delete', 'Update', 'AddUser', 'AddAdmin', 'AllUsers', 'AllAdmins', 'ActiveReservations', 'AllCarsSold', 'Reserve', 'profileUser', 'AcceptReservation', 'cancelReservation', 'AddSeled', 'Deduct'];
+    $pages = ['Add', 'Reservation', 'AllCars', 'Dashboard', 'Details', 'Delete', 'Update', 'AddUser', 'AddAdmin', 'AllUsers', 'AllAdmins', 'ActiveReservations', 'AllCarsSold', 'Reserve', 'profileUser', 'AcceptReservation', 'cancelReservation', 'AddSeled', 'Deduct', 'Ban'];
 
     // Check if the requested action is in the list of valid pages
     if (in_array($Action, $pages)) {
